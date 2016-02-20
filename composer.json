@@ -1,5 +1,5 @@
 {
-    "name": "goalio/goalio-forgotpassword",
+    "name": "joe-parente/goalio-forgotpassword",
     "description": "Adding Forgot Password functionalitiy to ZfcUser",
     "type": "library",
     "license": "BSD-3-Clause",
