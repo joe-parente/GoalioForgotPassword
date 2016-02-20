@@ -17,7 +17,7 @@
     ],
     "require": {
         "goalio/goalio-mailservice": "1.*",
-        "joe-parente/zfc-user": "1.*"
+        "joe-parente/zfc-user": "dev-master"
     },
     "autoload": {
         "psr-0": {
