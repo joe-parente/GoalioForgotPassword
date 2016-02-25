@@ -44,6 +44,7 @@ class Reset extends ProvidesEventsForm
             ->setLabel('Set new password')
             ->setAttributes(array(
                 'type'  => 'submit',
+                'class' => "btn btn-primary btn-dtg"
             ));
 
         $this->add($submitElement, array(
