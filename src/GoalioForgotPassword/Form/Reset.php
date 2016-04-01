@@ -26,6 +26,7 @@ class Reset extends ProvidesEventsForm
             ),
             'attributes' => array(
                 'type' => 'password',
+                'id'   => 'passwordbox',
             ),
         ));
 
@@ -36,6 +37,7 @@ class Reset extends ProvidesEventsForm
             ),
             'attributes' => array(
                 'type' => 'password',
+                'id'   => 'verifybox',
             ),
         ));
 
@@ -44,7 +46,8 @@ class Reset extends ProvidesEventsForm
             ->setLabel('Set new password')
             ->setAttributes(array(
                 'type'  => 'submit',
-                'class' => "btn btn-primary btn-dtg"
+                'class' => "btn btn-primary btn-dtg",
+                'id'    => 'passwordbutton',
             ));
 
         $this->add($submitElement, array(
