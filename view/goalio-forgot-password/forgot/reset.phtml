@@ -28,3 +28,33 @@ echo $this->formButton($form->get('submit'));
 </dl>
 
 <?php echo $this->form()->closeTag(); ?>
+<script>
+        
+    $(document).ready(function () {
+        $('#passwordbox, #verifybox').pStrength({
+            'bind': 'keyup change',
+            'changeBackground': true,
+            'passwordValidFrom': 50,
+            'backgrounds': [['#cc0000', '#FFF'], ['#cc3333', '#FFF'], ['#cc6666', '#FFF'], ['#ff9999', '#FFF'],
+                ['#e0941c', '#FFF'], ['#e8a53a', '#FFF'], ['#eab259', '#FFF'], ['#efd09e', '#FFF'],
+                ['#ccffcc', '#FFF'], ['#66cc66', '#FFF'], ['#339933', '#FFF'], ['#006600', '#FFF'], ['#105610', '#FFF']],
+            'onPasswordStrengthChanged': function (passwordStrength, strengthPercentage) {
+                if ($(this).val()) {
+                    $.fn.pStrength('changeBackground', $(this), passwordStrength);
+                    
+                } else {
+                    $.fn.pStrength('resetStyle', $(this));
+                }
+                $('#displayp').html('Your password strength is ' + strengthPercentage + '%' + '; 50% is required<br />' + 
+                            '(Use numbers, special characters and upper and lower case letters for the best score)');
+            },
+            'onValidatePassword': function (strengthPercentage) {
+//                $('#' + $(this).data('display')).html(
+//                        $('#displayp').html(' Great, now you can continue to register!');
+//                        );
+                $('#displayp').html(' Great, now you can continue to register!');
+                $('#passwordbutton').prop('disabled', false);
+            }
+        });
+    });
+    </script>
